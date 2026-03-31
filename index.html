@@ -5,20 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: sans-serif;
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 0 20px;
       color: #333;
     }
-    h1 { font-size: 2.5rem; }
-    a { color: #0070f3; }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      border-bottom: 1px solid #e0e0e0;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #111;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: #f0f0f0;
+    }
+
+    nav a.active {
+      font-weight: 600;
+      color: #111;
+    }
+
+    /* Search box */
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 4px 12px;
+      gap: 6px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+      width: 140px;
+      background: transparent;
+    }
+
+    .search-box svg {
+      color: #888;
+      flex-shrink: 0;
+    }
+
+    /* Page content */
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
   </style>
 </head>
 <body>
-  <h1>Hi, I'm Your Name</h1>
-  <p>Welcome to my personal website. I'm a [what you do].</p>
-  <p>You can find me on <a href="https://github.com/yourusername">GitHub</a>.</p>
+
+  <header>
+    <a class="site-name" href="index.html">Your Name</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
+      <div class="search-box">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" placeholder="Search..." />
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Hi, I'm Your Name</h1>
+    <p>Welcome to my personal website.</p>
+  </main>
+
 </body>
 </html>
