@@ -12,7 +12,7 @@
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Georgia', serif;
       color: #333;
     }
 
@@ -46,6 +46,7 @@
       text-decoration: none;
       color: #444;
       font-size: 0.95rem;
+      font-family: 'Georgia', serif;
       padding: 6px 14px;
       border-radius: 6px;
       transition: background 0.2s;
@@ -87,7 +88,7 @@
     .profile {
       display: flex;
       align-items: flex-start;
-      gap: 60px;
+      gap: 80px;
     }
 
     .profile-photo {
@@ -95,8 +96,8 @@
     }
 
     .profile-photo img {
-      width: 220px;
-      height: 220px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
       border-radius: 12px;
       display: block;
@@ -108,35 +109,27 @@
     }
 
     .profile-info h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-      color: #111;
-    }
-
-    .profile-info .title {
       font-size: 1rem;
-      color: #666;
+      font-weight: 400;
+      line-height: 1.85;
+      color: #444;
       margin-bottom: 20px;
+      font-style: italic;
     }
 
     .profile-info p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       line-height: 1.75;
       color: #444;
-      margin-bottom: 24px;
+      margin-bottom: 0;
     }
 
-    .contact a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    .profile-info p a {
       color: #0070f3;
       text-decoration: none;
-      font-size: 0.95rem;
     }
 
-    .contact a:hover {
+    .profile-info p a:hover {
       text-decoration: underline;
     }
   </style>
@@ -168,17 +161,8 @@
 
       <!-- RIGHT: Bio and email -->
       <div class="profile-info">
-    <h1>I am a 5th year PhD candidate in Economics at UC Davis, working at the intersection of labor, health, and economic history. My research examines the determinants of physician supply and location choice. Using novel historical data and plausibly exogenous variation, I study how changes in occupational licensing requirements affect both newly licensed and incumbent physicians, with implications for physician labor supply and local healthcare capacity. </h1>
-    <p>You can contact me at wniyang@ucdavis.edu.</p>
-        <div class="contact">
-          <a href="mailto:wniyang@ucdavis.edu">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="4" width="20" height="16" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
-            wniyang@ucdavis.edu
-          </a>
-        </div>
+        <h1>I am a 5th year PhD candidate in Economics at UC Davis, working at the intersection of labor, health, and economic history. My research examines the determinants of physician supply and location choice. Using novel historical data and plausibly exogenous variation, I study how changes in occupational licensing requirements affect both newly licensed and incumbent physicians, with implications for physician labor supply and local healthcare capacity.</h1>
+        <p>You can contact me at <a href="mailto:wniyang@ucdavis.edu">wniyang@ucdavis.edu</a>.</p>
       </div>
 
     </div>
