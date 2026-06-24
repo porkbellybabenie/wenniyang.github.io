@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Wenni Yang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      border-bottom: 1px solid #e0e0e0;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #111;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+      font-family: 'Lora', Georgia, serif;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: #f0f0f0;
+    }
+
+    nav a.active {
+      font-weight: 600;
+      color: #111;
+    }
+
+    /* CV viewer */
+    main {
+      flex: 1;
+      padding: 24px 40px;
+      min-height: 0;
+    }
+
+    .cv-frame {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+    }
+
+    .cv-fallback {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .cv-fallback a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    .cv-fallback a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 14px 20px;
+      }
+
+      main {
+        padding: 16px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-name {
+        font-size: 1.1rem;
+      }
+
+      nav a {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="site-name" href="index.html">Wenni Yang</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html" class="active">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <iframe class="cv-frame" src="CV_Wenni_Yang.pdf" title="CV — Wenni Yang">
+    </iframe>
+    <p class="cv-fallback">
+      If the CV doesn't display above,
+      <a href="CV_Wenni_Yang.pdf" target="_blank" rel="noopener">open it in a new tab</a>.
+    </p>
+  </main>
+
+</body>
+</html>
